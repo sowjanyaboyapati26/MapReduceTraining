@@ -13,7 +13,7 @@ public class WordCountReducer<KEY> extends Reducer<KEY, LongWritable,
     for (LongWritable val : values) {
       sum += val.get();
     }
-    if (sum>4)
+    if (sum>8)
     result.set(sum);
     
     context.write(key, result);
